@@ -1,0 +1,8 @@
+POST http://10.172.0.207:19001/api/rest_j/v1/user/login
+Content-Type: application/json
+Accept: application/json
+
+{
+  "userName": "hadoop",
+  "password": "hadoop"
+}

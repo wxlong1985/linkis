@@ -110,7 +110,7 @@
     <hadoop-hdfs-client.artifact>hadoop-hdfs-client</hadoop-hdfs-client.artifact>
     <hbase.version>2.5.3</hbase.version>
     <hive.version>3.1.3</hive.version>
-    <spark.version>3.2.1</spark.version>
+    <spark.version>3.5.1</spark.version>
     <hadoop-hdfs-client-shade.version>2.7.2</hadoop-hdfs-client-shade.version>
     <spark.hadoop.groupid>org.apache.hadoop</spark.hadoop.groupid>
     <spark.hadoop-common.artifactId>hadoop-common</spark.hadoop-common.artifactId>

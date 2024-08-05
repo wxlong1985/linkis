@@ -26,7 +26,7 @@
 ### deploy user
 deployUser=hadoop
 ##If you don't set it, a random password string will be generated during installation
-deployPwd=
+deployPwd=hadoop
 
 ### database type
 ### choose mysql or postgresql, default mysql
@@ -85,12 +85,12 @@ HADOOP_KEYTAB_PATH=${HADOOP_KEYTAB_PATH:-"/appcom/keytab/"}
 HADOOP_VERSION=${HADOOP_VERSION:-"3.3.4"}
 
 #Hive
-HIVE_HOME=/appcom/Install/hive
-HIVE_CONF_DIR=/appcom/config/hive-config
+HIVE_HOME=${HIVE_HOME}
+HIVE_CONF_DIR=${HIVE_HOME}/config/
 
 #Spark
-SPARK_HOME=/appcom/Install/spark
-SPARK_CONF_DIR=/appcom/config/spark-config
+SPARK_HOME=${SPARK_HOME}
+SPARK_CONF_DIR=${SPARK_HOME}/config/
 
 
 ## Engine version conf

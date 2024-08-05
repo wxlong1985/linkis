@@ -41,6 +41,11 @@ RUN useradd -r -s /bin/bash -u 100001 -g root -G wheel hadoop
 # if you want to set specific yum repos conf file, you can put its at linkis-dist/docker/CentOS-Base.repo
 # and exec [COPY  apache-linkis-*-bin/docker/CentOS-Epel.repo  /etc/yum.repos.d/CentOS-Epel.repo]
 
+RUN rm -fr /etc/yum.repos.d/*
+COPY  apache-linkis-1.4.0-bin/docker/CentOS-Base.repo  /etc/yum.repos.d/CentOS-Base.repo
+RUN yum makecache
+RUN yum -y update
+
 # TODO: remove install mysql client when schema-init-tools is ready
 RUN yum install -y \
        less vim unzip curl sudo krb5-workstation sssd crontabs net-tools python-pip glibc-common \
