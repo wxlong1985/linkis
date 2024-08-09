@@ -288,7 +288,8 @@ public class DefaultEngineConnResourceService extends EngineConnResourceService 
     if (engineConnBmlResources.size() == 0
         && (boolean) EngineConnPluginConfiguration.EC_BML_VERSION_MAY_WITH_PREFIX_V.getValue()) {
       logger.info("Try to get engine conn bml resource with prefex v");
-      engineConnBmlResourceDao.getAllEngineConnBmlResource(engineConnType, "v" + version);
+      engineConnBmlResources =
+          engineConnBmlResourceDao.getAllEngineConnBmlResource(engineConnType, "v" + version);
     }
 
     Optional<BmlResource> confBmlResourceMap =
