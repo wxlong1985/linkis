@@ -109,7 +109,7 @@
     <hadoop.version>3.3.4</hadoop.version>
     <hadoop-hdfs-client.artifact>hadoop-hdfs-client</hadoop-hdfs-client.artifact>
     <hbase.version>2.5.3</hbase.version>
-    <hive.version>3.1.3</hive.version>
+    <hive.version>3.1.2</hive.version>
     <spark.version>3.5.1</spark.version>
     <hadoop-hdfs-client-shade.version>2.7.2</hadoop-hdfs-client-shade.version>
     <spark.hadoop.groupid>org.apache.hadoop</spark.hadoop.groupid>
@@ -130,7 +130,7 @@
     <seatunnel.version>2.1.2</seatunnel.version>
     <shell.version>1</shell.version>
     <sqoop.version>1.4.6</sqoop.version>
-    <elasticsearch.version>7.6.2</elasticsearch.version>
+    <elasticsearch.version>7.12.1</elasticsearch.version>
 
     <!-- This is the same as the kubernetes-client version referenced in spark3.2.1 -->
     <kubernetes-client.version>5.4.1</kubernetes-client.version>
@@ -245,6 +245,7 @@
     <spotless-maven-plugin.version>2.24.1</spotless-maven-plugin.version>
     <jacoco-maven-plugin.version>0.8.8</jacoco-maven-plugin.version>
     <jacoco.skip>false</jacoco.skip>
+    <datanucleus-api-jdo.version>4.2.4</datanucleus-api-jdo.version>
 
     <!-- for JDK-17 test-->
     <extraJavaTestArgs>-XX:+IgnoreUnrecognizedVMOptions

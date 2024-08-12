@@ -6,3 +6,11 @@ Accept: application/json
   "userName": "hadoop",
   "password": "hadoop"
 }
+
+POST http://10.172.0.207:9102/api/rest_j/v1/rpc/receiveAndReply
+Content-Type: application/json
+Accept: application/json
+
+{
+"method": "/enginePlugin/engineConn/refreshAll"
+}

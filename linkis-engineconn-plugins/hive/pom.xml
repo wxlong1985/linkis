@@ -33,6 +33,32 @@
       <artifactId>linkis-engineconn-plugin-core</artifactId>
       <version>${project.version}</version>
     </dependency>
+    <dependency>
+      <groupId>org.datanucleus</groupId>
+      <artifactId>datanucleus-api-jdo</artifactId>
+      <version>${datanucleus-api-jdo.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.datanucleus</groupId>
+      <artifactId>datanucleus-rdbms</artifactId>
+      <version>4.1.19</version>
+    </dependency>
+    <dependency>
+      <groupId>org.datanucleus</groupId>
+      <artifactId>javax.jdo</artifactId>
+      <version>3.2.0-m3</version>
+    </dependency>
+    <dependency>
+      <groupId>com.zaxxer</groupId>
+      <artifactId>HikariCP</artifactId>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/org.apache.paimon/paimon-hive-connector-3.1 -->
+    <dependency>
+      <groupId>org.apache.paimon</groupId>
+      <artifactId>paimon-hive-connector-3.1</artifactId>
+      <version>0.8.1</version>
+    </dependency>
 
     <dependency>
       <groupId>org.apache.linkis</groupId>

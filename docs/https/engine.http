@@ -1,0 +1,8 @@
+POST http://10.172.0.207:8085/api/rest_j/v1/rpc/receiveAndReply
+Content-Type: application/json
+Accept: application/json
+Cookie: _ga=GA1.1.2052129406.1722318885; _ga_4NJG4BH26D=GS1.1.1722318885.1.1.1722319306.0.0.0; workspaceId=224; JSESSIONID=1m7rfn8rkgizn; linkis_user_session_ticket_id_v1=M7UZXQP9Ld2UUh+1kkTt0s2AZjoRDZk/2HLiVea4FcQ=; workspaceName=bdapWorkspace
+
+{
+  "method": "/enginePlugin/engineConn/refreshAll"
+}
