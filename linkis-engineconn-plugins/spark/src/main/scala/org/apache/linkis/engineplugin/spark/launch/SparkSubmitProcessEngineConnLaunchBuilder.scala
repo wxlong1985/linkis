@@ -174,7 +174,9 @@ class SparkSubmitProcessEngineConnLaunchBuilder(builder: JavaProcessEngineConnLa
       jars += s"$clusterJars/*"
     }
 
-    addOpt("--master", "yarn")
+    CommonVars("spark.master", "yarn").getValue
+    val value1: String = CommonVars("spark.master", "yarn").getValue
+    addOpt("--master", value1)
     addOpt("--deploy-mode", deployMode)
     addOpt("--name", appName)
     addProxyUser()
