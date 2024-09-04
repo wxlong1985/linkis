@@ -45,6 +45,8 @@ import org.apache.linkis.manager.label.utils.LabelUtil
 import org.apache.linkis.server.JMap
 
 import org.apache.commons.lang3.StringUtils
+import org.apache.paimon.spark.SparkCatalog
+import org.apache.paimon.spark.extensions.PaimonSparkSessionExtensions
 import org.apache.spark.{SparkConf, SparkContext}
 import org.apache.spark.sql.{SparkSession, SQLContext}
 import org.apache.spark.util.SparkUtils
@@ -180,6 +182,16 @@ class SparkEngineConnFactory extends MultiExecutorEngineConnFactory with Logging
         }
         sparkConf.set("spark.yarn.dist.files", pythonLibUris.mkString(","))
       }
+    }
+    val warehouse: String = CommonVars("spark.sql.catalog.paimon.warehouse").getValue
+    val thriftUrl: String = CommonVars("spark.sql.catalog.paimon.uri").getValue
+    if (StringUtils.isNotBlank(warehouse)) {
+      sparkConf.set("spark.sql.extensions", classOf[PaimonSparkSessionExtensions].getName)
+      sparkConf.set("spark.sql.warehouse.dir", warehouse)
+      sparkConf.set("spark.sql.catalog.paimon.warehouse", warehouse)
+      sparkConf.set("spark.sql.catalog.paimon", classOf[SparkCatalog].getName)
+      sparkConf.set("spark.sql.catalog.paimon.metastore", "hive")
+      sparkConf.set("spark.sql.catalog.paimon.uri", thriftUrl)
     }
     // Distributes needed libraries to workers
     // when spark version is greater than or equal to 1.5.0
