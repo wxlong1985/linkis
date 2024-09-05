@@ -143,6 +143,8 @@
     <sqoop.version>1.4.6</sqoop.version>
     <elasticsearch.version>7.6.2</elasticsearch.version>
     <paimon.version>0.8.1</paimon.version>
+    <datanucleus-api-jdo.version>4.2.4</datanucleus-api-jdo.version>
+    <hikaricp.version>4.0.3</hikaricp.version>
 
     <!-- This is the same as the kubernetes-client version referenced in spark3.2.1 -->
     <kubernetes-client.version>5.4.1</kubernetes-client.version>
